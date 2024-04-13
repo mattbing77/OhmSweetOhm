@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+#dashboardContainer {
+  max-width: 600px; /* Adjust based on your preference */
+  margin: auto; /* Center the container horizontally */
+}
+
+#sensorData, #applianceControls {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#sensorData {
+  text-align: center;
+}
+
+#sensorData .header h2, #applianceControls h2 {
+  margin-bottom: 20px; /* Adds some space between the title and content */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid-container > div {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: #0084ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+canvas {
+  margin-top: 10px;
+}
+
+#applianceControls {
+  text-align: center; /* Center the title and contents within */
+}
+
+#applianceControls button {
+  display: inline-block; /* Make buttons align in the center */
+  margin: 5px; /* Maintain some space around buttons */
+}

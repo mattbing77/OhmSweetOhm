@@ -1,2 +1,22 @@
 
-smart-rv-system
+# dependencies
+smart-rv-system/node_modules
+smart-rv-system/.pnp
+smart-rv-system/.pnp.js
+
+# testing
+smart-rv-system/coverage
+
+# production
+smart-rv-system/build
+
+# misc
+smart-rv-system/.DS_Store
+smart-rv-system/.env.local
+smart-rv-system/.env.development.local
+smart-rv-system/.env.test.local
+smart-rv-system/.env.production.local
+
+smart-rv-system/npm-debug.log*
+smart-rv-system/yarn-debug.log*
+smart-rv-system/yarn-error.log*
