@@ -4,7 +4,7 @@ import axios from 'axios';
 function ApplianceControls() {
     // States to track the status of light and onning
     const [isLightOn, setIsLightOn] = useState(false);
-    const [isOnningOn, setIsOnningOn] = useState(false);
+    const [isAwningOn, setIsAwningOn] = useState(false);
 
     const toggleLight = () => {
         axios.post('/api/toggle_light')
@@ -20,15 +20,15 @@ function ApplianceControls() {
             });
     };
 
-    const toggleOnning = () => {
+    const toggleAwning = () => {
         axios.post('/api/toggle_onning')
             .then(response => {
-                alert(`Onning toggled! Response: ${response.data.status}`);
+                alert(`Awning toggled! Response: ${response.data.status}`);
                 // Update state based on the response
-                setIsOnningOn(response.data.status === 'on');
+                setIsAwningOn(response.data.status === 'on');
             })
             .catch(error => {
-                alert('Error toggling onning');
+                alert('Error toggling awning');
                 console.error(error);
             });
     };
@@ -39,8 +39,8 @@ function ApplianceControls() {
         color: 'white',
     };
     
-    const onningButtonStyle = {
-        backgroundColor: isOnningOn ? 'blue' : 'gray',
+    const awningButtonStyle = {
+        backgroundColor: isAwningOn ? 'blue' : 'gray',
         color: 'white',
     };
 
@@ -55,11 +55,11 @@ function ApplianceControls() {
                 Toggle Light
             </button>
             <button 
-                id="toggleOnning" 
-                onClick={toggleOnning} 
-                style={onningButtonStyle}
+                id="toggleAwning" 
+                onClick={toggleAwning} 
+                style={awningButtonStyle}
             >
-                Toggle Onning
+                Toggle Awning
             </button>
         </div>
     );
