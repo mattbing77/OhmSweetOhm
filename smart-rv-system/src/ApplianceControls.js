@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function ApplianceControls() {
-    // States to track the status of light and onning
+    // States to track the status of light and awning
     const [isLightOn, setIsLightOn] = useState(false);
     const [isAwningOn, setIsAwningOn] = useState(false);
 
@@ -21,7 +21,7 @@ function ApplianceControls() {
     };
 
     const toggleAwning = () => {
-        axios.post('/api/toggle_onning')
+        axios.post('/api/toggle_awning')
             .then(response => {
                 alert(`Awning toggled! Response: ${response.data.status}`);
                 // Update state based on the response

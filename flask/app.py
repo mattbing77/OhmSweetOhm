@@ -10,7 +10,7 @@ CORS(app)
 # In-memory storage for device states
 device_states = {
     "light": False,  # Initially off
-    "onning": False  # Assuming "onning" is correct; replace with "awning" if it was a typo
+    "awning": False  
 }
 
 @app.route('/')
@@ -34,15 +34,15 @@ def toggle_light():
     print(f"Light toggled to {status}!")
     return jsonify({'status': status})
 
-@app.route('/api/toggle_onning', methods=['POST'])
-def toggle_onning():
-    # Toggle the onning state
-    current_state = device_states["onning"]
+@app.route('/api/toggle_awning', methods=['POST'])
+def toggle_awning():
+    # Toggle the awning state
+    current_state = device_states["awning"]
     new_state = not current_state
-    device_states["onning"] = new_state
+    device_states["awning"] = new_state
     # Return the new state
     status = "on" if new_state else "off"
-    print(f"Onning toggled to {status}!")  # Note: This seems to be a typo. Did you mean 'awning' toggled?
+    print(f"Awning toggled to {status}!")  # Note: This seems to be a typo. Did you mean 'awning' toggled?
     return jsonify({'status': status})
 
 if __name__ == '__main__':
